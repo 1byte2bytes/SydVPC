@@ -36,4 +36,8 @@ int processOpcode(uint32_t regist) {
 		AL = (AH * 10) + AL;
 		AH = 0;
 	}
+	else if (opcode == OPCODE_AAM) {
+		AH = AL / 10;
+		AL = AL % 10;
+	}
 }
