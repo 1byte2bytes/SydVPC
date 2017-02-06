@@ -16,6 +16,7 @@ int processOpcode(uint32_t regist) {
 	char opcode = getFirstDigit(regist);
 	AL = getAL(EAX);
 	AH = getAH(EAX);
+
 	if (opcode == OPCODE_AAA) {
 		char AL_lownibble = getLowQuartet(AL);
 
@@ -30,5 +31,9 @@ int processOpcode(uint32_t regist) {
 			CF = 0;
 		}
 		AH = getLowQuartet(AH);
+	}
+	else if (opcode == OPCODE_AAD) {
+		AL = (AH * 10) + AL;
+		AH = 0;
 	}
 }
