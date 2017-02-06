@@ -20,7 +20,7 @@ int processOpcode(uint32_t regist) {
 	if (opcode == OPCODE_AAA) {
 		char AL_lownibble = getLowQuartet(AL);
 
-		if ((AL_lownibble > 9) || (AF = 1)) {
+		if ((AL_lownibble > 9) || (AF == 1)) {
 			AL = AL + 6;
 			AH = AH + 1;
 			AF = 1;
