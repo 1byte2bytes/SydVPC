@@ -1,4 +1,5 @@
 #pragma once
+#include <stdint.h>
 
 char getAL(uint16_t regist) {
 	return regist & 0xFF;

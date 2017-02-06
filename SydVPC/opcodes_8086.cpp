@@ -40,4 +40,21 @@ int processOpcode(uint32_t regist) {
 		AH = AL / 10;
 		AL = AL % 10;
 	}
+	else if (opcode == OPCODE_AAS) {
+		char AL_lownibble = getLowQuartet(AL);
+
+		if ((AL_lownibble > 9) || (AF == 1)) {
+			AL = AL - 6;
+			AH = AH - 1;
+			AF = 1;
+			CF = 1;
+		}
+		else {
+			AF = 0;
+			CF = 0;
+		}
+		AL = getLowQuartet(AL);
+	}
+
+	return 1;
 }

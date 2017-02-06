@@ -21,9 +21,21 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="opcodes_8086.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nibbles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="registers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SydVPC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opcodes_8086.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
