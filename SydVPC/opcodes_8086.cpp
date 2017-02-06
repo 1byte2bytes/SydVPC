@@ -29,5 +29,6 @@ int processOpcode(uint32_t regist) {
 			AF = 0;
 			CF = 0;
 		}
+		AH = getLowQuartet(AH);
 	}
 }
